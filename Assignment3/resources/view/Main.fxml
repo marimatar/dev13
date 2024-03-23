@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:id="mainBox" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
+         <children>
+            <Button alignment="BASELINE_LEFT" layoutX="9.0" layoutY="125.0" mnemonicParsing="false" onAction="#showHomeOp" prefHeight="31.0" prefWidth="140.0" style="-fx-background-color: black;" text="Home" textFill="WHITE" />
+            <Button alignment="BASELINE_LEFT" layoutX="9.0" layoutY="165.0" mnemonicParsing="false" onAction="#showCategoryOp" prefHeight="31.0" prefWidth="140.0" style="-fx-background-color: black;" text="Create Category" textFill="WHITE" />
+            <Button alignment="BASELINE_LEFT" layoutX="9.0" layoutY="205.0" mnemonicParsing="false" onAction="#showLocationOp" prefHeight="31.0" prefWidth="182.0" style="-fx-background-color: black;" text="Create Storage Location" textFill="WHITE" />
+            <Button alignment="BASELINE_LEFT" layoutX="9.0" layoutY="245.0" mnemonicParsing="false" onAction="#showCreateAssetOp" prefHeight="31.0" prefWidth="140.0" style="-fx-background-color: black;" text="Create Asset" textFill="WHITE" />
+            <Button alignment="BASELINE_LEFT" layoutX="9.0" layoutY="285.0" mnemonicParsing="false" onAction="#showManageAssetOp" prefHeight="31.0" prefWidth="140.0" style="-fx-background-color: black;" text="Manage Assets" textFill="WHITE" />
+            <Button alignment="BASELINE_LEFT" layoutX="9.0" layoutY="325.0" mnemonicParsing="false" onAction="#showReportOp" prefHeight="31.0" prefWidth="140.0" style="-fx-background-color: black;" text="Reports" textFill="WHITE" />
+            <ImageView fitHeight="95.0" fitWidth="182.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logosmaller.png" />
+               </image>
+            </ImageView>
+            <Button alignment="BASELINE_LEFT" layoutX="6.0" layoutY="29.0" mnemonicParsing="false" onAction="#showHomeOp" prefHeight="71.0" prefWidth="182.0" style="-fx-background-color: black;" text="Home Logo" textFill="WHITE" visible="false" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

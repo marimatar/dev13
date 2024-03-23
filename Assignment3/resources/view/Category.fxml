@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CategoryController">
+   <children>
+      <Label layoutX="20.0" layoutY="20.0" prefHeight="37.0" prefWidth="301.0" text="Create New Category">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Line endX="250.0" layoutX="120.0" layoutY="60.0" startX="-100.0" />
+      <Label layoutX="20.0" layoutY="150.0" prefHeight="27.0" prefWidth="200.0" text="Category Name " />
+      <TextField fx:id="category_name" layoutX="20.0" layoutY="177.0" prefHeight="31.0" prefWidth="351.0" />
+      <Button layoutX="150.0" layoutY="243.0" mnemonicParsing="false" onAction="#saveCategoryOp" prefHeight="10.0" prefWidth="100.0" style="-fx-background-color: teal;" text="Save" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="result_message" layoutX="20.0" layoutY="208.0" prefHeight="27.0" prefWidth="351.0" text=" " />
+   </children>
+</AnchorPane>
