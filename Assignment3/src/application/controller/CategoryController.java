@@ -10,6 +10,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 
+import application.Category;
+
 public class CategoryController 
 {
 	private CommonObjs commonObjs = CommonObjs.getInstance();
@@ -34,7 +36,7 @@ public class CategoryController
 		}
 		
 		//Create category object and store name here
-		
+		Category cat = new Category(category);
 		
 		
 	}
