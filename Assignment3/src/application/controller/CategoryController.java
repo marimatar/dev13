@@ -30,9 +30,6 @@ public class CategoryController
 		else
 		{
 			result_message.setText("Category added successfully!");
-			
-			//result_message.set
-			System.out.println(result_message.getText());
 		}
 		
 		//Create category object and store name here
