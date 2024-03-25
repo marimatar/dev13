@@ -18,7 +18,7 @@
             <Button alignment="BASELINE_LEFT" layoutX="9.0" layoutY="325.0" mnemonicParsing="false" onAction="#showReportOp" prefHeight="31.0" prefWidth="140.0" style="-fx-background-color: black;" text="Reports" textFill="WHITE" />
             <ImageView fitHeight="95.0" fitWidth="182.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@logosmaller.png" />
+                  <Image url="@logo.png" />
                </image>
             </ImageView>
             <Button alignment="BASELINE_LEFT" layoutX="6.0" layoutY="29.0" mnemonicParsing="false" onAction="#showHomeOp" prefHeight="71.0" prefWidth="182.0" style="-fx-background-color: black;" text="Home Logo" textFill="WHITE" visible="false" />
