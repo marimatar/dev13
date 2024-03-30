@@ -29,17 +29,16 @@ public class CategoryController
 		else
 		{
 			result_message.setText("Category added successfully!");
+			
+			//Create category object and store name here
+			Category cat = new Category(category);
+			boolean result = DAL.addCategory(cat);
+			
+			if(!result)
+			{
+				result_message.setText("Category " + category + " already exists!");
+			}
 		}
-		
-		//Create category object and store name here
-		Category cat = new Category(category);
-		boolean result = DAL.addCategory(cat);
-		
-		if(!result)
-		{
-			result_message.setText("Category " + category + " already exists!");
-		}
-		
 	}
 
 }

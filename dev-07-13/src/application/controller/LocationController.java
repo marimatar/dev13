@@ -27,17 +27,18 @@ public class LocationController {
 		{
 			result_message.setText("Location can not be blank!");
 		}
-		else
+		else 
 		{
 			result_message.setText("Location added successfully!");
-		}
-
- 		//Create location object and store name here
-		Location loc = new Location(location, description);
-		boolean result = DAL.addLocation(loc);
-		
-		if(!result) {
-			result_message.setText("Location " + location + " already exists!");
+			
+			//Create location object and store name here
+			Location loc = new Location(location, description);
+			boolean result = DAL.addLocation(loc);
+			
+			if(!result) 
+			{
+				result_message.setText("Location " + location + " already exists!");
+			}
 		}
 	}
 
