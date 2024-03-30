@@ -1,8 +1,5 @@
 package application.controller;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import application.Category;
 import application.CommonObjs;
 import data_access_layer.DataAccessLayer;
@@ -19,7 +16,7 @@ public class CategoryController
 	
 	@FXML public void saveCategoryOp() 
 	{	
-		//Get text 
+		//get text 
 		String category = category_name.getText();
 		
 		//check if the category field is left blank
@@ -33,7 +30,7 @@ public class CategoryController
 			//display message for category being added
 			result_message.setText("Category added successfully!");
 			
-			//Create category object and store name here
+			//create category object and store name
 			Category cat = new Category(category);
 			
 			//call DAL class to store Category names to csv files

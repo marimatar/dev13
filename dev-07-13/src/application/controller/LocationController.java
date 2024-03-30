@@ -19,7 +19,7 @@ public class LocationController {
 	
 	@FXML public void saveLocationOp() 
 	{	
-		//Get text
+		//get text
 		String location = location_name.getText();
 		String description = location_description.getText();
 		
@@ -35,7 +35,7 @@ public class LocationController {
 			//display added Location successfully message
 			result_message.setText("Location added successfully!");
 			
-			//Create location object and store name here
+			//create location object and store name
 			Location loc = new Location(location, description);
 			
 			//called addLocation function using location object and DAL object

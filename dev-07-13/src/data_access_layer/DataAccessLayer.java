@@ -26,7 +26,7 @@ public class DataAccessLayer {
     	categoriesMap = new HashMap<>();
     }
     
-    //addLocation class adds the Location object to its respective HashMap,
+    //addLocation method adds the Location object to its respective HashMap,
     //stores the attributes of the Location into its corresponding csv file 
     //using the appendToFile function, 
     //returns false if Location already exists and true if otherwise
@@ -55,7 +55,7 @@ public class DataAccessLayer {
         return true;
     }
     
-    //addCategory class adds the Category object to its respective HashMap,
+    //addCategory method adds the Category object to its respective HashMap,
     //stores the attributes of the Category into its corresponding csv file 
     //using the appendToFile function, 
     //returns false if Category already exists and true if otherwise
@@ -81,7 +81,7 @@ public class DataAccessLayer {
         return true;
     }
     
-    //reads the content of the Category and Location objects into the csv
+    //write the content of the Category and Location objects into the csv
     //file whose file path is passed
     private void appendToFile(String filePath, String content) {
     	
