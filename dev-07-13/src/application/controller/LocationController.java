@@ -23,18 +23,25 @@ public class LocationController {
 		String location = location_name.getText();
 		String description = location_description.getText();
 		
+		//check if the location name field is left blank or not
 		if(location.length() == 0)
 		{
+			//if field left blank, display error message
 			result_message.setText("Location can not be blank!");
 		}
+		//if field is filled correctly
 		else 
 		{
+			//display added Location successfully message
 			result_message.setText("Location added successfully!");
 			
 			//Create location object and store name here
 			Location loc = new Location(location, description);
+			
+			//called addLocation function using location object and DAL object
 			boolean result = DAL.addLocation(loc);
 			
+			//if addLocation returns false, display location exists message
 			if(!result) 
 			{
 				result_message.setText("Location " + location + " already exists!");

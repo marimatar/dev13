@@ -14,7 +14,7 @@ public class Category {
 	{
 		this.categoryName = name;
 	}
-	
+	//get function for category name
 	public String getCategoryName()
 	{
 		return this.categoryName;

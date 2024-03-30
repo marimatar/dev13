@@ -19,23 +19,30 @@ public class CategoryController
 	
 	@FXML public void saveCategoryOp() 
 	{	
-		//Get text
+		//Get text 
 		String category = category_name.getText();
 		
+		//check if the category field is left blank
 		if(category.length() == 0)
 		{
+			//display error message for blank category name
 			result_message.setText("Category can not be blank!");
 		}
 		else
 		{
+			//display message for category being added
 			result_message.setText("Category added successfully!");
 			
 			//Create category object and store name here
 			Category cat = new Category(category);
+			
+			//call DAL class to store Category names to csv files
 			boolean result = DAL.addCategory(cat);
 			
+			//if the addCategory class returns false, Category name already exists
 			if(!result)
 			{
+				//display category already exists message
 				result_message.setText("Category " + category + " already exists!");
 			}
 		}
