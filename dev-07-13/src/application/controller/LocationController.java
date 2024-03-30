@@ -1,19 +1,13 @@
 package application.controller;
 
-import java.io.IOException;
-import java.util.HashMap;
-
-import java.net.URL;
-
 import application.Location;
+import data_access_layer.DataAccessLayer;
 import application.CommonObjs;
+
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextArea;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
 
 public class LocationController {
 	
@@ -21,7 +15,7 @@ public class LocationController {
 	@FXML private TextField location_name;
 	@FXML private TextArea location_description;
 	@FXML private Label result_message;
-	
+	private DataAccessLayer DAL = new DataAccessLayer();
 	
 	@FXML public void saveLocationOp() 
 	{	
@@ -37,17 +31,14 @@ public class LocationController {
 		{
 			result_message.setText("Location added successfully!");
 		}
-		
-		
+
  		//Create location object and store name here
 		Location loc = new Location(location, description);
+		boolean result = DAL.addLocation(loc);
 		
-		
-		
-		
-		
-		
-		
+		if(!result) {
+			result_message.setText("Location " + location + " already exists!");
+		}
 	}
 
 }

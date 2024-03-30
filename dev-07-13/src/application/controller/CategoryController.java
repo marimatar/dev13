@@ -1,22 +1,21 @@
 package application.controller;
 
-import java.io.IOException;
-import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 import application.Category;
 import application.CommonObjs;
+import data_access_layer.DataAccessLayer;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
 
 public class CategoryController 
 {
 	private CommonObjs commonObjs = CommonObjs.getInstance();
 	@FXML private TextField category_name;
 	@FXML private Label result_message;
+	private DataAccessLayer DAL = new DataAccessLayer();
 	
 	@FXML public void saveCategoryOp() 
 	{	
@@ -34,6 +33,12 @@ public class CategoryController
 		
 		//Create category object and store name here
 		Category cat = new Category(category);
+		boolean result = DAL.addCategory(cat);
+		
+		if(!result)
+		{
+			result_message.setText("Category " + category + " already exists!");
+		}
 		
 	}
 
