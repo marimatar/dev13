@@ -6,7 +6,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.LocationController">
    <children>
       <Label layoutX="20.0" layoutY="20.0" prefHeight="37.0" prefWidth="301.0" text="Create New Location">
@@ -17,11 +16,13 @@
       <Label layoutX="20.0" layoutY="150.0" prefHeight="27.0" prefWidth="200.0" text="Location Name" />
       <Line endX="250.0" layoutX="120.0" layoutY="60.0" startX="-100.0" />
       <TextField fx:id="location_name" layoutX="20.0" layoutY="177.0" prefHeight="31.0" prefWidth="351.0" />
-      <Label fx:id="result_message" layoutX="20.0" layoutY="208.0" prefHeight="27.0" prefWidth="351.0" />
-      <Button layoutX="150.0" layoutY="243.0" mnemonicParsing="false" onAction="#saveLocationOp" prefHeight="10.0" prefWidth="100.0" style="-fx-background-color: teal;" text="Save" textFill="WHITE">
+      <Label fx:id="result_message" layoutX="20.0" layoutY="317.0" prefHeight="27.0" prefWidth="351.0" />
+      <Button layoutX="150.0" layoutY="350.0" mnemonicParsing="false" onAction="#saveLocationOp" prefHeight="10.0" prefWidth="100.0" style="-fx-background-color: teal;" text="Save" textFill="WHITE">
          <font>
             <Font size="13.0" />
          </font>
       </Button>
+      <Label layoutX="20.0" layoutY="230.0" prefHeight="27.0" prefWidth="200.0" text="Location Description" />
+      <TextArea fx:id="location_description" layoutX="20.0" layoutY="257.0" prefHeight="62.0" prefWidth="351.0" />
    </children>
 </AnchorPane>
